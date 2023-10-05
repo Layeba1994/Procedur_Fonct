@@ -1,0 +1,33 @@
+ALGORITHM  recherche 
+VAR T1,T2,T3 T:ARRAY_OF INTEGER;
+VAR i,j,N,M,som:INTEGER=0;
+BEGIN
+Write ("Entrer la taille du premiere tableau:");
+Read(N);
+FOR i FROM 0 TO  N-1 DO
+Write("Enter l'element :",i);
+Read(T1[i]);
+END_FOR
+
+Write("Enter la taille du deuxieme tableau:");
+Read(M);
+FOR i FROM 0 TO M-1 DO
+Write("Enter l'element :",i);
+Read(T2[i]);
+END_FOR
+FOR i FROM 0 TO N-1 DO
+FOR j FROM 0 TO M-1 DO
+IF(T1[i]=!T2[j]) THEN
+somme:= somme+T1[i];
+END_IF
+END_FOR
+END_FOR
+FOR j FROM 0 TO M-1 DO
+FOR i FROM 0 TO N-1 DO
+IF (T2[j]=!T1[i]) THEN
+somme:=somme+T[j];
+END_IF 
+END_FOR
+END_FOR
+Write("la somme de tous les elements distincts est :",somme);
+END

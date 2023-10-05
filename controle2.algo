@@ -1,0 +1,52 @@
+PROCEDURE dot_product(v1,v2,ps)
+VAR
+   n, i:INTEGER;
+    N,M:INTEGER;
+BEGIN
+    ps:=0;
+    FOR i FROM 0 TO N-1 DO
+    ps:=ps+ v1[i] * v2[i] ;
+    END FOR
+END
+ALGORITHM verifier_horthogonalite(n)
+VAR
+    n:INTEGER;
+    v1,v2 : ARRAY_OF INTEGER;
+BEGIN 
+FOR i FROM 0 TO n DO
+Read v1[i];
+Read v2[i];
+ps:= dot_product(v1,v2);
+ IF (ps=0) THEN
+ write("les deux vecteurs sont horthogonaux");
+ 
+ ELSE
+    write("les deux vecteurs ne sont pas horthogonaux");
+ END_IF
+ END FOR
+ END
+
+ FUNCTION dot_product(v1,v2) : INTEGER
+VAR  ps:=0;
+VAR n,j,N,M:INTEGER;
+
+ BEGIN
+ FOR j FROM 0 TO N-1 DO
+    ps:=ps+v1[j]*v2[j];
+END_FOR
+    RETURN ps ;
+ END
+
+ALGORITHM DeterminerHorthogonalite(n)
+BEGIN
+FOR k FROM 0 TO n DO
+Read(v1[j]);
+Read(v2[j]);
+ps:=dot_product(v1,v2);
+IF(ps=0) THEN
+write("les deux vecteure sont horthogonaux")
+ELSE
+write("les deux vecteurs ne sont pas horthogonaux")
+END_IF
+END_FOR
+END
